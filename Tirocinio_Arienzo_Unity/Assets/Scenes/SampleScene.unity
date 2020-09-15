@@ -1472,9 +1472,9 @@ ArticulationBody:
   m_GameObject: {fileID: 2236506584913995002}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
+  m_ParentAnchorPosition: {x: 0.004354477, y: -0.07691312, z: 0.000000029802322}
   m_ParentAnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
-  m_AnchorPosition: {x: 0.030206203, y: 0.15166783, z: 0}
+  m_AnchorPosition: {x: 0.03456068, y: 0.0747546, z: 0.0000000059915535}
   m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   m_ComputeParentAnchor: 1
   m_ArticulationJointType: 2
@@ -1483,10 +1483,10 @@ ArticulationBody:
   m_LinearZ: 2
   m_SwingY: 2
   m_SwingZ: 2
-  m_Twist: 2
+  m_Twist: 1
   m_XDrive:
-    lowerLimit: 0
-    upperLimit: 0
+    lowerLimit: 190
+    upperLimit: 100
     stiffness: 100000
     damping: 100
     forceLimit: 3.4028235e+38
@@ -2317,17 +2317,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joints:
   - inputAxis: Test
-    robotPart: {fileID: 6022282022186041177}
-  - inputAxis: Test2
-    robotPart: {fileID: 2236506584913995002}
-  - inputAxis: Test
-    robotPart: {fileID: 7468356693158270301}
-  - inputAxis: Test
-    robotPart: {fileID: 2971494485897235409}
-  - inputAxis: Test
-    robotPart: {fileID: 5826532606435076561}
-  - inputAxis: Test
-    robotPart: {fileID: 6339082449266527524}
+    robotPart_1: {fileID: 6022282022186041177}
+    robotPart_2: {fileID: 2236506584913995002}
+    robotPart_3: {fileID: 7468356693158270301}
+    robotPart_4: {fileID: 2971494485897235409}
+    robotPart_5: {fileID: 5826532606435076561}
+    robotPart_6: {fileID: 6339082449266527524}
 --- !u!4 &4529659317503229395
 Transform:
   m_ObjectHideFlags: 0
@@ -2630,7 +2625,6 @@ GameObject:
   - component: {fileID: 1789811558484884666}
   - component: {fileID: 542624374849920100}
   - component: {fileID: 6022282022186041178}
-  - component: {fileID: 6022282022186041179}
   - component: {fileID: 6022282022186041180}
   m_Layer: 0
   m_Name: 6.1 Indice
@@ -2648,9 +2642,9 @@ ArticulationBody:
   m_GameObject: {fileID: 6022282022186041177}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0.06549385, y: -0.7445321, z: 0.3731784}
+  m_ParentAnchorPosition: {x: 0.08436301, y: -0.67529726, z: 0.33317843}
   m_ParentAnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
-  m_AnchorPosition: {x: 0.02, y: 0.04, z: 0.04}
+  m_AnchorPosition: {x: 0.038869143, y: 0.10923472, z: 0.000000028182093}
   m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   m_ComputeParentAnchor: 1
   m_ArticulationJointType: 2
@@ -2659,10 +2653,10 @@ ArticulationBody:
   m_LinearZ: 2
   m_SwingY: 2
   m_SwingZ: 2
-  m_Twist: 2
+  m_Twist: 1
   m_XDrive:
-    lowerLimit: 0
-    upperLimit: 0
+    lowerLimit: 200
+    upperLimit: 100
     stiffness: 100000
     damping: 100
     forceLimit: 3.4028235e+38
@@ -2689,20 +2683,6 @@ ArticulationBody:
   m_JointFriction: 0.05
   m_Immovable: 0
   m_UseGravity: 1
---- !u!64 &6022282022186041179
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6022282022186041177}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8512857537427212381, guid: e0652e3dc040bbd4192079f69322290a, type: 3}
 --- !u!114 &6022282022186041180
 MonoBehaviour:
   m_ObjectHideFlags: 0

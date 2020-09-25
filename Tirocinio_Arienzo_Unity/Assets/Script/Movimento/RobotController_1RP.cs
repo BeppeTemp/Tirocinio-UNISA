@@ -45,7 +45,7 @@ public class RobotController_1RP : MonoBehaviour
         {
             Joint joint = joints[i];
             ArticulationJointController jointController = joint.robotPart_1.GetComponent<ArticulationJointController>();
-            jointController.ForceToRotation(0.0f);
+            jointController.ForceToRotation(rotations[i]);
         }
     }
 

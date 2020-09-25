@@ -10,108 +10,62 @@ public class Agente : Agent
     public GameObject cubo_target;
     public GameObject end_effector;
 
-    private RobotController_1RP rc_1;
-    private RobotController_4RP rc_4;
-    private RobotController_6RP rc_6;
+    private RobotController_1RP rc;
+    private TouchDetector td;
+    private float[] defaultRotations;
 
     void Start()
     {
-        rc_1 = robot_agente.GetComponent<RobotController_1RP>();
-        rc_4 = robot_agente.GetComponent<RobotController_4RP>();
-        rc_6 = robot_agente.GetComponent<RobotController_6RP>();
+        rc = robot_agente.GetComponent<RobotController_1RP>();
+        td = cubo_target.GetComponent<TouchDetector>();
+        defaultRotations = new float[32];
     }
 
     //Quando inizia l'elpisodio fai questo
     public override void OnEpisodeBegin()
     {
         //Ristabilisco la posizione del robot
-        float[] dr1 = {0.0f, 0.0f, 0.0f, 0.0f};
-        rc_1.ForceJointsToRotations(dr1);
-        float[] dr4 = {0.0f};
-        rc_4.ForceJointsToRotations(dr4);
-        float[] dr6 = {0.0f, 0.0f, 0.0f, 0.0f};
-        rc_6.ForceJointsToRotations(dr6);
+        defaultRotations[0] = 0.0f;
+        defaultRotations[1] = 90f;
+        defaultRotations[2] = -90f;
+        defaultRotations[3] = 0.0f;
+        for (int i = 4; i < 28; i++)
+        {
+            defaultRotations[i] = 0.0f;
+        }
+        rc.ForceJointsToRotations(defaultRotations);
+
+        //Risetto la variabile Booleana
+        td.setHaveTouch(false);
 
         //Sposto il cubo in una nuova posizione sul tavolo
-        cubo_target.GetComponent<Transform>().localPosition = new Vector3(6, 8, Random.value * 4 - 2);
+        cubo_target.GetComponent<Transform>().localPosition = new Vector3(12, Random.Range(14.45f, 20f), Random.Range(12.5f, 18.15f));
     }
 
     public override void CollectObservations(VectorSensor sensor)
     {
+        if (rc.joints[0].robotPart_1 == null)
+        {
+            //Robot non presente, non vengono aggiunte osservazioni
+            return;
+        }
+
         //Rotazione corrente dei giunti
-        float[] rotations_1 = rc_1.GetCurrentJointRotations();
-        foreach (float rotation in rotations_1)
-        {
-            //Normalizza la rotazione in un valore compresto tra -1 e 1
-            float normalizedRotation = (rotation / 360.0f) % 1f;
-            sensor.AddObservation(normalizedRotation);
-        }
-        float[] rotations_4 = rc_1.GetCurrentJointRotations();
-        foreach (float rotation in rotations_4)
-        {
-            //Normalizza la rotazione in un valore compresto tra -1 e 1
-            float normalizedRotation = (rotation / 360.0f) % 1f;
-            sensor.AddObservation(normalizedRotation);
-        }
-        float[] rotations_6 = rc_1.GetCurrentJointRotations();
-        foreach (float rotation in rotations_6)
+        float[] rotations = rc.GetCurrentJointRotations();
+        foreach (float rotation in rotations)
         {
             //Normalizza la rotazione in un valore compresto tra -1 e 1
             float normalizedRotation = (rotation / 360.0f) % 1f;
             sensor.AddObservation(normalizedRotation);
         }
 
-        //Posizione corrente dei giunti
-        foreach (var joint in rc_1.joints)
+        /*Posizione corrente dei giunti
+        foreach (var joint in rc.joints)
         {
             sensor.AddObservation(joint.robotPart_1.transform.position - robot_agente.transform.position);
             sensor.AddObservation(joint.robotPart_1.transform.forward);
             sensor.AddObservation(joint.robotPart_1.transform.right);
-        }
-        foreach (var joint in rc_4.joints)
-        {
-            sensor.AddObservation(joint.robotPart_1.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_1.transform.forward);
-            sensor.AddObservation(joint.robotPart_1.transform.right);
-
-            sensor.AddObservation(joint.robotPart_2.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_2.transform.forward);
-            sensor.AddObservation(joint.robotPart_2.transform.right);
-
-            sensor.AddObservation(joint.robotPart_3.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_3.transform.forward);
-            sensor.AddObservation(joint.robotPart_3.transform.right);
-
-            sensor.AddObservation(joint.robotPart_4.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_4.transform.forward);
-            sensor.AddObservation(joint.robotPart_4.transform.right);
-        }
-        foreach (var joint in rc_6.joints)
-        {
-            sensor.AddObservation(joint.robotPart_1.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_1.transform.forward);
-            sensor.AddObservation(joint.robotPart_1.transform.right);
-
-            sensor.AddObservation(joint.robotPart_2.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_2.transform.forward);
-            sensor.AddObservation(joint.robotPart_2.transform.right);
-
-            sensor.AddObservation(joint.robotPart_3.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_3.transform.forward);
-            sensor.AddObservation(joint.robotPart_3.transform.right);
-
-            sensor.AddObservation(joint.robotPart_4.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_4.transform.forward);
-            sensor.AddObservation(joint.robotPart_4.transform.right);
-
-            sensor.AddObservation(joint.robotPart_5.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_5.transform.forward);
-            sensor.AddObservation(joint.robotPart_5.transform.right);
-
-            sensor.AddObservation(joint.robotPart_6.transform.position - robot_agente.transform.position);
-            sensor.AddObservation(joint.robotPart_6.transform.forward);
-            sensor.AddObservation(joint.robotPart_6.transform.right);
-        }
+        }*/
 
         //Posizione del robot-relativamente al cubo
         Vector3 cubePosition = cubo_target.transform.position - robot_agente.transform.position;
@@ -129,21 +83,32 @@ public class Agente : Agent
         for (int jointIndex = 0; jointIndex < vectorAction.Length; jointIndex++)
         {
             RotationDirection rotationDirection = ActionIndexToRotationDirection((int)vectorAction[jointIndex]);
-            rc_1.RotateJoint(jointIndex, rotationDirection, false);
-            rc_4.RotateJoint(jointIndex, rotationDirection, false);
-            rc_6.RotateJoint(jointIndex, rotationDirection, false);
+            rc.RotateJoint(jointIndex, rotationDirection, false);
         }
 
-        float distanceToCube = Vector3.Distance(end_effector.transform.position, cubo_target.transform.position);
-
         //Termina l'episodio se la distanza fra l'end-effector e il cubo è minore di un tot
-        if (distanceToCube < 1f)
+        if (td.getHaveTouch()==true)
         {
             SetReward(1f);
             EndEpisode();
         }
 
-        EndEpisode();
+        /*Calcolo ricompensa in caso di insuccesso
+        float distanceToCube = Vector3.Distance(end_effector.transform.position, cubo_target.transform.position);
+
+        float reward = 1 - (distanceToCube / 10);
+        SetReward(reward);*/
+
+
+        /*var jointHeight = 0f; // This is to reward the agent for keeping high up // max is roughly 3.0f
+        for (int jointIndex = 0; jointIndex < rc.joints.Length; jointIndex++)
+        {
+            jointHeight += rc.joints[jointIndex].robotPart_1.transform.position.y - cubo_target.transform.position.y;
+        }
+        var reward = -distanceToCube + jointHeight / 100f;
+
+        SetReward(reward * 0.1f);*/
+
     }
 
     //Covertitore di ActionIndex in RotationDirection
@@ -152,3 +117,5 @@ public class Agente : Agent
         return (RotationDirection)(actionIndex - 1);
     }
 }
+
+//Comando di avvio: mlagents-learn config/arm_config.yaml --run-id=BraccioML --force

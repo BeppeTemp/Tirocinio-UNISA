@@ -121,12 +121,12 @@
     <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Policies\IPolicy.cs" />
     <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Policies\RemotePolicy.cs" />
     <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Policies\BrainParameters.cs" />
+    <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Sensors\Observation.cs" />
     <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Sensors\Reflection\Vector3ReflectionSensor.cs" />
     <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Policies\HeuristicPolicy.cs" />
     <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Inference\Utils\RandomNormal.cs" />
     <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Timer.cs" />
     <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Sensors\RayPerceptionSensor.cs" />
-    <Compile Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Sensors\Observation.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Runtime\Unity.ML-Agents.asmdef" />
@@ -328,23 +328,23 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>Library\PackageCache\com.unity.burst@1.3.4\Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="System.IO.Abstractions.TestingHelpers">
-      <HintPath>Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Plugins\System.IO.Abstractions.TestingHelpers.dll</HintPath>
-    </Reference>
     <Reference Include="Google.Protobuf">
       <HintPath>Library\PackageCache\com.unity.barracuda@1.0.2\Barracuda\Runtime\Plugins\ProtoBuffer\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.3.4\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.IO.Abstractions">
       <HintPath>Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Plugins\System.IO.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Interactive.Async">
-      <HintPath>Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Plugins\ProtoBuffer\System.Interactive.Async.dll</HintPath>
+    <Reference Include="System.IO.Abstractions.TestingHelpers">
+      <HintPath>Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Plugins\System.IO.Abstractions.TestingHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Grpc.Core">
       <HintPath>Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Plugins\ProtoBuffer\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Interactive.Async">
+      <HintPath>Library\PackageCache\com.unity.ml-agents@1.3.0-preview\Plugins\ProtoBuffer\System.Interactive.Async.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.6f1\Editor\Data\NetStandard\ref\2.0.0\netstandard.dll</HintPath>

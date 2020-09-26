@@ -1,3 +1,2 @@
-model_checkpoint_path: "BraccioML-500178.ckpt"
-all_model_checkpoint_paths: "BraccioML-499996.ckpt"
-all_model_checkpoint_paths: "BraccioML-500178.ckpt"
+model_checkpoint_path: "BraccioML-153000.ckpt"
+all_model_checkpoint_paths: "BraccioML-153000.ckpt"

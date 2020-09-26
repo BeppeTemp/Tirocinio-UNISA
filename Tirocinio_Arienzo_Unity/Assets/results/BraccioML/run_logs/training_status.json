@@ -2,23 +2,17 @@
     "BraccioML": {
         "checkpoints": [
             {
-                "steps": 499996,
-                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-499996.nn",
-                "reward": 0.775,
-                "creation_time": 1601050851.8491313
-            },
-            {
-                "steps": 500178,
-                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-500178.nn",
-                "reward": 0.7441860465116279,
-                "creation_time": 1601050853.7709055
+                "steps": 153000,
+                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-153000.nn",
+                "reward": 123.21259978082445,
+                "creation_time": 1601126118.338275
             }
         ],
         "final_checkpoint": {
-            "steps": 500178,
+            "steps": 153000,
             "file_path": "results\\BraccioML\\BraccioML.nn",
-            "reward": 0.7441860465116279,
-            "creation_time": 1601050853.7709055
+            "reward": 123.21259978082445,
+            "creation_time": 1601126118.338275
         }
     },
     "metadata": {

@@ -13,7 +13,6 @@ public class Agente : Agent
     private RobotController_1RP rc;
     private TouchDetector td;
     private float[] defaultRotations;
-    private int x;
 
     void Start()
     {
@@ -24,9 +23,6 @@ public class Agente : Agent
     //Quando inizia l'elpisodio fai questo
     public override void OnEpisodeBegin()
     {
-        Debug.Log("Ci sono stati : " + x + " tocchi.");
-        x = 0;
-
         //Ristabilisco la posizione del robot
         defaultRotations[0] = 0.0f;
         defaultRotations[1] = 90f;
@@ -96,26 +92,17 @@ public class Agente : Agent
             rc.RotateJoint(jointIndex, rotationDirection, false);
         }
 
-        x = 0;
         //Calcolo ricompensa
-        float reward = 0;
-        for (int effectorindex = 0; effectorindex < 14; effectorindex++)
+        for (int effectorindex = 0; effectorindex < end_effectors.Length; effectorindex++)
         {
             td = end_effectors[effectorindex].GetComponent<TouchDetector>();
             if (td.getHaveTouch() == true)
             {
-                x++;
-                reward += 0.0714f;
+                Debug.Log("Ha toccato");
+                SetReward(1);
+                EndEpisode();
             }
         }
-
-        //Termina l'episodio se la distanza fra l'end-effector e il cubo è minore di un tot
-        if (reward == 1) 
-        {
-            SetReward(reward);
-            EndEpisode();
-        }
-        SetReward(reward);
     }
 
     //Covertitore di ActionIndex in RotationDirection

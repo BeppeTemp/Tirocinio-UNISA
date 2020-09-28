@@ -2,17 +2,17 @@
     "BraccioML": {
         "checkpoints": [
             {
-                "steps": 153000,
-                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-153000.nn",
-                "reward": 123.21259978082445,
-                "creation_time": 1601126118.338275
+                "steps": 42228,
+                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-42228.nn",
+                "reward": 0.0,
+                "creation_time": 1601212703.9476483
             }
         ],
         "final_checkpoint": {
-            "steps": 153000,
+            "steps": 42228,
             "file_path": "results\\BraccioML\\BraccioML.nn",
-            "reward": 123.21259978082445,
-            "creation_time": 1601126118.338275
+            "reward": 0.0,
+            "creation_time": 1601212703.9476483
         }
     },
     "metadata": {

@@ -1,0 +1,6 @@
+model_checkpoint_path: "BraccioML-2000010.ckpt"
+all_model_checkpoint_paths: "BraccioML-499991.ckpt"
+all_model_checkpoint_paths: "BraccioML-999995.ckpt"
+all_model_checkpoint_paths: "BraccioML-1499960.ckpt"
+all_model_checkpoint_paths: "BraccioML-1999946.ckpt"
+all_model_checkpoint_paths: "BraccioML-2000010.ckpt"

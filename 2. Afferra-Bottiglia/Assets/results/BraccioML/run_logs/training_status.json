@@ -1,0 +1,41 @@
+{
+    "BraccioML": {
+        "checkpoints": [
+            {
+                "steps": 262134,
+                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-262134.nn",
+                "reward": 0.4839170836311651,
+                "creation_time": 1602581056.5096989
+            },
+            {
+                "steps": 445102,
+                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-445102.nn",
+                "reward": 0.289237668161435,
+                "creation_time": 1602581788.5035615
+            },
+            {
+                "steps": 499969,
+                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-499969.nn",
+                "reward": 0.33879781420765026,
+                "creation_time": 1602581998.8560648
+            },
+            {
+                "steps": 587169,
+                "file_path": "results\\BraccioML\\BraccioML\\BraccioML-587169.nn",
+                "reward": 0.29435483870967744,
+                "creation_time": 1602582306.2846205
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 587169,
+            "file_path": "results\\BraccioML\\BraccioML.nn",
+            "reward": 0.29435483870967744,
+            "creation_time": 1602582306.2846205
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.1.0",
+        "mlagents_version": "0.19.0",
+        "tensorflow_version": "2.3.0"
+    }
+}

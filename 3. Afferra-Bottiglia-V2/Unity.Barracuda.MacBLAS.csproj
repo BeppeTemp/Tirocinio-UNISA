@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F19ACD97-2B55-75F8-0FC0-D56FE27587D4}</ProjectGuid>
+    <ProjectGuid>{6956AB3C-9A93-B01E-7411-9B83B1CC70F8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Barracuda.MacBLAS</AssemblyName>
@@ -629,7 +629,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Barracuda.csproj">
-      <Project>{BD6BFA54-8584-E302-56DF-BBEBB9538F35}</Project>
+      <Project>{D61151CA-2414-25C0-FDE9-E5285F201368}</Project>
       <Name>Unity.Barracuda</Name>
     </ProjectReference>
   </ItemGroup>

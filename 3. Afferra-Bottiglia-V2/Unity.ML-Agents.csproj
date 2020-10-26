@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{1F75E57A-6AD2-84F3-F145-C7B6E1759E90}</ProjectGuid>
+    <ProjectGuid>{342F95F1-930B-B73C-CAD5-EF4865FE8147}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ML-Agents</AssemblyName>
@@ -700,11 +700,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Barracuda.csproj">
-      <Project>{BD6BFA54-8584-E302-56DF-BBEBB9538F35}</Project>
+      <Project>{D61151CA-2414-25C0-FDE9-E5285F201368}</Project>
       <Name>Unity.Barracuda</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.ML-Agents.CommunicatorObjects.csproj">
-      <Project>{7AA75EBD-F695-2580-154D-C08781303FC6}</Project>
+      <Project>{FF69F525-A5AD-A64C-8FC3-034CEA2FBCD4}</Project>
       <Name>Unity.ML-Agents.CommunicatorObjects</Name>
     </ProjectReference>
   </ItemGroup>

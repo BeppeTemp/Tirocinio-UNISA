@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3B6F3FFC-532D-E681-4989-B8CB43FC7C34}</ProjectGuid>
+    <ProjectGuid>{1E232F00-A6A5-6709-D4F1-F42380EF803E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Barracuda.iOSBLAS</AssemblyName>
@@ -629,7 +629,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Barracuda.csproj">
-      <Project>{BD6BFA54-8584-E302-56DF-BBEBB9538F35}</Project>
+      <Project>{D61151CA-2414-25C0-FDE9-E5285F201368}</Project>
       <Name>Unity.Barracuda</Name>
     </ProjectReference>
   </ItemGroup>

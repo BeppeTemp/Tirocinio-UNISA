@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{727231FF-07C9-BC07-AA24-D40F02E15905}</ProjectGuid>
+    <ProjectGuid>{B7E44698-CB3D-5931-672D-682D0D3FEE2B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Barracuda.Editor</AssemblyName>
@@ -639,15 +639,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Barracuda.csproj">
-      <Project>{BD6BFA54-8584-E302-56DF-BBEBB9538F35}</Project>
+      <Project>{D61151CA-2414-25C0-FDE9-E5285F201368}</Project>
       <Name>Unity.Barracuda</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{C73CA952-4436-A3E6-E8CE-69175051CF9C}</Project>
+      <Project>{E3C6F1C7-27DF-8113-E793-F339B0BDFC51}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{2A970E5F-86B7-1CC9-F213-EADA0124EB8A}</Project>
+      <Project>{871B9165-91B9-EF4A-D49E-B4543BEC533B}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

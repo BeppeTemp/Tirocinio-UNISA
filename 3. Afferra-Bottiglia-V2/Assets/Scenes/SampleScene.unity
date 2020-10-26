@@ -531,7 +531,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: -3058793326386507497, guid: 52b1a8013893a5d448d674040758b2e9, type: 3}
 --- !u!1 &114918866 stripped
 GameObject:
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 2000
+  MaxStep: 500
   robot_agente: {fileID: 226280832}
   target: {fileID: 498326547}
   end_effector: {fileID: 31903336}
@@ -2182,7 +2182,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: 991224792478226232, guid: 52b1a8013893a5d448d674040758b2e9, type: 3}
 --- !u!1 &798606165
 GameObject:
@@ -3492,7 +3492,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: 3909233067320746374, guid: 52b1a8013893a5d448d674040758b2e9, type: 3}
 --- !u!1 &1858180969 stripped
 GameObject:

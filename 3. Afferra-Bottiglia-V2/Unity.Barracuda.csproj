@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BD6BFA54-8584-E302-56DF-BBEBB9538F35}</ProjectGuid>
+    <ProjectGuid>{D61151CA-2414-25C0-FDE9-E5285F201368}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Barracuda</AssemblyName>
@@ -677,7 +677,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Burst.csproj">
-      <Project>{6F42D6F9-3C1F-DDFC-8097-B4542A6C02BC}</Project>
+      <Project>{DEE5500A-A265-114A-21DB-A19D57337F89}</Project>
       <Name>Unity.Burst</Name>
     </ProjectReference>
   </ItemGroup>

@@ -66,7 +66,6 @@ public class Agente : Agent
         currentRotations[3] = defaultRotations[3];
 
         //Resetto la posizione della bottiglia
-        target.GetComponent<Transform>().localPosition = new Vector3(-0.150f, 0, 2.25f);
         target.GetComponent<Transform>().localPosition = new Vector3(0,0, 2.25f);
         target.transform.rotation = targetDefaultRotation;
         target.GetComponent<Rigidbody>().velocity = Vector3.zero;

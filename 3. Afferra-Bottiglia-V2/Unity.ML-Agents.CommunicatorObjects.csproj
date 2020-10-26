@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7AA75EBD-F695-2580-154D-C08781303FC6}</ProjectGuid>
+    <ProjectGuid>{FF69F525-A5AD-A64C-8FC3-034CEA2FBCD4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.ML-Agents.CommunicatorObjects</AssemblyName>
